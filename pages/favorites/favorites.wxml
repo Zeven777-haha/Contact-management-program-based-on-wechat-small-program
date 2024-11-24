@@ -1,0 +1,8 @@
+<view class="container">
+  <block wx:for="{{favorites}}" wx:key="id">
+    <view class="contact-item" bindtap="viewContact" data-id="{{item._id}}">
+      <text class="name">{{item.lastName}}{{item.firstName}}</text>
+    </view>
+    <view class="divider"></view>
+  </block>
+</view>

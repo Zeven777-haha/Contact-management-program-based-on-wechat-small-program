@@ -1,0 +1,20 @@
+.container {
+  padding: 10px;
+  background-color: #f5f5f5;
+}
+
+.contact-item {
+  padding: 15px 10px;
+  background-color: #fff;
+  font-size: 18px;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.divider {
+  height: 1px;
+  background-color: #ddd;
+  margin: 0;
+}
