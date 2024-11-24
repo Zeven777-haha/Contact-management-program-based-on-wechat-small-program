@@ -1,0 +1,63 @@
+{
+  "appid": "wx62d31823f1459bd9",
+  "compileType": "miniprogram",
+  "libVersion": "3.6.5",
+  "cloudfunctionRoot": "cloudfunctions/",
+  "miniprogramRoot": "",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "setting": {
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true,
+    "urlCheck": false,
+    "coverView": true,
+    "showShadowRootInWxmlPanel": true,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "useStaticServer": true,
+    "disableUseStrict": false,
+    "useCompilerModule": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    }
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "condition": {},
+  "debug": false,
+  "sitemapLocation": "sitemap.json",
+  "useExtendedLib": {
+    "weui": true
+  },
+  "cloud": true,
+  "lazyCodeLoading": "requiredComponents",
+  "functionalPages": false,
+  "subPackages": [],
+  "worker": "workers/",
+  "requiredBackgroundModes": [],
+  "plugins": {},
+  "entranceDeclare": {},
+  "pushNotifications": {
+    "apnsEnv": "dev",
+    "enableVivoPush": false,
+    "enableMIPush": false,
+    "enableFCMPush": false,
+    "enableGetPushDeviceToken": false
+  },
+  "enablePassiveEvent": true,
+  "enableDefaultFWARemoved": false,
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
+  }
+}
