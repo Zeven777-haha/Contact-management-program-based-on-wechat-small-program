@@ -1,0 +1,78 @@
+<scroll-view class="content" scroll-y="true">
+  <!-- 联系人详情表单 -->
+  <view class="form">
+    <!-- 姓氏 -->
+    <view class="form-item">
+      <text class="label">姓氏</text>
+      <input class="input" value="{{contact.lastName}}" disabled />
+    </view>
+
+    <!-- 名字 -->
+    <view class="form-item">
+      <text class="label">名字</text>
+      <input class="input" value="{{contact.firstName}}" disabled />
+    </view>
+
+    <!-- 公司 -->
+    <view class="form-item">
+      <text class="label">公司</text>
+      <input class="input" value="{{contact.company}}" disabled />
+    </view>
+
+    <!-- 电话号码 -->
+    <view class="form-item">
+      <text class="label">电话号码</text>
+      <block wx:if="{{contact.phoneNumbers.length > 0}}">
+        <block wx:for="{{contact.phoneNumbers}}" wx:key="index">
+          <view class="phone-item">
+            <text class="phone-label">电话{{index + 1}}:</text>
+            <text class="phone-value">{{item}}</text>
+          </view>
+        </block>
+      </block>
+      <block wx:else>
+        <view class="phone-item">
+          <text class="phone-label">暂无电话号码</text>
+        </view>
+      </block>
+    </view>
+
+    <!-- 电子邮件 -->
+    <view class="form-item">
+      <text class="label">电子邮件</text>
+      <input class="input" value="{{contact.email}}" disabled />
+    </view>
+
+    <!-- 其他联系方式 -->
+    <view class="form-item">
+      <text class="label">其他联系方式</text>
+      <input class="input" value="{{contact.otherContact}}" disabled />
+    </view>
+  </view>
+
+  <!-- 按钮组 -->
+  <view class="button-group">
+    <!-- 保存修改按钮 -->
+    <button class="btn btn-primary" bindtap="saveContact">保存修改</button>
+    <!-- 新增电话号码按钮 -->
+    <button class="btn btn-secondary" bindtap="showAddPhoneModal">新增电话号码</button>
+    <!-- 收藏按钮 -->
+    <button class="btn btn-secondary" bindtap="toggleFavorite">
+      {{contact.isFavorite ? '取消收藏' : '添加收藏'}}
+    </button>
+    <!-- 删除联系人按钮 -->
+    <button class="btn btn-danger" bindtap="deleteContact">删除联系人</button>
+  </view>
+
+  <!-- 新增电话号码弹窗 -->
+  <view wx:if="{{showAddPhoneModal}}" class="modal-overlay">
+    <view class="modal">
+      <view class="modal-header">新增电话号码</view>
+      <input class="modal-input" placeholder="请输入电话号码" value="{{newPhoneNumber}}" bindinput="onNewPhoneInput" />
+      <view class="modal-footer">
+        <button class="btn btn-cancel" bindtap="hideAddPhoneModal">取消</button>
+        <button class="btn btn-confirm" bindtap="saveNewPhoneNumber">确定</button>
+      </view>
+    </view>
+  </view>
+</scroll-view>
