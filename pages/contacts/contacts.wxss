@@ -1,0 +1,56 @@
+/* 页面整体内容样式 */
+.content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 联系人列表样式 */
+.contact-item {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+}
+
+.contact-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.contact-company {
+  font-size: 14px;
+  color: #666;
+}
+
+/* 按钮组样式 */
+.button-group {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  flex: 1;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

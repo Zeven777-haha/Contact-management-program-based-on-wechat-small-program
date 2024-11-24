@@ -1,0 +1,15 @@
+<scroll-view class="content" scroll-y="true">
+  <!-- 联系人列表 -->
+  <block wx:for="{{contacts}}" wx:key="id">
+    <view class="contact-item" bindtap="viewContactDetail" data-id="{{item._id}}">
+      <text class="contact-name">{{item.firstName}} {{item.lastName}}</text>
+      <text class="contact-company">{{item.company}}</text>
+    </view>
+  </block>
+
+  <!-- 导出和导入按钮 -->
+  <view class="button-group">
+    <button class="btn btn-primary" bindtap="exportContacts">一键导出</button>
+    <button class="btn btn-secondary" bindtap="importContacts">一键导入</button>
+  </view>
+</scroll-view>
